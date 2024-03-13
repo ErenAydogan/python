@@ -1,14 +1,13 @@
 import string
 import random
 
-length = 2
+length = 16
 string_list = ''.join([string.ascii_lowercase, string.ascii_uppercase, string.digits])
-stop_code = "AB"
 
-number = 1
-while True:
+
+i = 1
+times = 3
+while (i <= times):
     code = ''.join(random.choices(string_list, k=length))
-    print(number, "-", code)
-    number += 1
-    if (code == stop_code):
-        break
+    i += 1
+    print(code)
