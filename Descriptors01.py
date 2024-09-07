@@ -1,6 +1,6 @@
 class MyDescriptor:
     def __get__(self, instance, owner): 
-        return "Bu bir descriptor."
+        return "This is a descriptor."
 
 class MyClass:
     descriptor = MyDescriptor()
