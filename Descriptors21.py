@@ -8,6 +8,9 @@ class Lazy:
     def __get__(self, obj, type=None) -> object:
         obj.__dict__[self.name]=self.function(obj)
         return obj.__dict__[self.name]
+    
+    def __set__(self, obj, value):
+        pass
 
 class Waiting:
     @Lazy
